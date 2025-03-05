@@ -2,7 +2,8 @@ library(maptools)
 library(ggplot2)
 library(readxl)
 library(dplyr)
-
+#Tras actualización del código
+library(lubridate)
 
 
 dir.create("output", showWarnings = FALSE)
@@ -29,6 +30,9 @@ ggsave("output/bee_histogram.png")
 write.csv(bee_summary, "output/bee_summary.csv", row.names = FALSE)
 write.csv(women_summary, "output/women_summary.csv", row.names = FALSE)
 
+#Añadido tras actualización
+fecha <- ymd("2024-02-27")
+print(fecha)
 
 # Congelar el entorno
 renv::snapshot()
